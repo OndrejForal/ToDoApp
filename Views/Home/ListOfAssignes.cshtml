@@ -1,0 +1,38 @@
+﻿@using FirstDbExercise
+@model List<Asignee>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Asignee</title>
+    <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" />
+</head>
+<body>
+    <header>
+
+        @Html.ActionLink("Add Asignees", "AddAssToDatabase", "Home")
+    </header>
+
+    <table>
+
+        <tr class="table-header">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+          
+            @foreach (var assignee in Model)
+            {
+        <tr class="data">
+
+            <td>@assignee.Id</td>
+            <td>@Html.ActionLink(assignee.Name, "ShowAsignedList", "Home", new { id = assignee.Id })</td>
+            <td>@assignee.Email</td>
+            <td>@Html.ActionLink("Delete", "DeleteAssFromDatabase", "Home", new { id = assignee.Id })</td>
+            <td>@Html.ActionLink("Edit", "UpdateAssInDB", "Home", new { name = assignee.Name ,email = assignee.Email })</td>
+        </tr>
+            }
+        </table>
+
+    </body>
+</html>
+

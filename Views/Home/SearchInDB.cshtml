@@ -1,0 +1,43 @@
+﻿@using FirstDbExercise
+@model List<ToDo>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>To Do</title>
+    <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" />
+</head>
+<body>
+    <header>
+
+        @Html.ActionLink("Add work to do", "AddToDatabase", "Home")
+        @Html.ActionLink("Return to list of tasks", "List", "Home")
+    </header>
+
+    <table>
+
+        <tr class="table-header">
+            <td>Id</td>
+            <td>Title</td>
+            <td>Descrition</td>
+            <td>Is it urgent?</td>
+            <td>Is it done?:</td>
+
+            @foreach (var toDo in Model)
+            {
+            <tr class="data">
+
+                <td>@toDo.Id</td>
+                <td>@toDo.Title</td>
+                <td>@toDo.Description</td>
+                <td>@toDo.IsUrgent</td>
+                <td>@toDo.IsUrgent</td>
+                <td>@Html.ActionLink("Delete", "DeleteFromDatabase", "Home", new { id = toDo.Id })</td>
+                <td>@Html.ActionLink("Edit", "EditInDatabase", "Home", new { title = toDo.Title })</td>
+            </tr>
+            <br />
+
+             }
+
+
+        </table>
+    </body>
+</html>

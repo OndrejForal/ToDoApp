@@ -1,0 +1,66 @@
+﻿@using FirstDbExercise.Models
+@model IndexViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>To Do</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @Html.ActionLink("Return to Todo list", "List", "Home", null, new { @class = "btn btn-info btn-large" })
+            </div>
+        </div>
+        <h1 style="text-align:center">Please provide information which work need to be edit and change </h1>
+        @using (Html.BeginForm("SaveEditInDatabase", "Home", FormMethod.Post))
+        {
+    <form class="border border-secondary">
+        <div class="form-group row">
+            <label for="name" class="col-2 col-form-label"> To do work to edit: </label>
+            <div class="col-10">
+                <input type="text" name="title" id="name" value="@Model.Todo.Title" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="description" class="col-2 col-form-label"> Description of work to edit: </label>
+            <div class="col-10">
+                <input type="text" name="Description" id="description" value="@Model.Todo.Description" />
+            </div>
+        </div>
+
+
+        <label for="urgent"> Is it urgent?: </label>
+        <input type="checkbox" name="IsUrgent" id="urgent" value="true" /><br />
+
+        <label for="done"> Is it done?: </label>
+        <input type="checkbox" name="IsDone" id="done" value="true" />
+
+        <input type="hidden" name="Id" value="@Model.Todo.Id" />
+
+        <h2>Who will do this Work?</h2>
+
+        <label for="worker"> Add worker: </label>
+        <select name="AsigneeId" id="AsigneeId" asp-for="AsigneeId">
+            @foreach (var worker in Model.Asignees)
+            {
+                <option value="@worker.Id">@worker.Name</option>
+            }
+
+        </select>
+        <div class="form-group row">
+            <div class="col-10">
+
+                <input type="submit" class="btn btn-primary" value="Submit" />
+                </div>
+            </div>
+    </form>
+        }
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>

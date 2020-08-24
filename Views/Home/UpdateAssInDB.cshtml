@@ -1,0 +1,26 @@
+﻿@using FirstDbExercise
+@model Asignee
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Asignee</title>
+</head>
+<body>
+
+    <h1>Please provide information which work need to be edit and change </h1>
+    @using (Html.BeginForm("SaveUpdateInDatabase", "Home", FormMethod.Post))
+    {
+        <label for="name"> Name to edit: </label>
+        <input type="text" name="name" id="name" value="@Model.Name" />
+        <input type="submit" value="Submit" /><br />
+
+        <label for="email"> E-mail edit: </label>
+        <input type="email" name="email" id="email" value="@Model.Email" />
+        <input type="submit" value="Submit" /><br />
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+    }
+
+</body>
+</html>

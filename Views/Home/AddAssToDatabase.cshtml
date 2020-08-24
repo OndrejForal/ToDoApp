@@ -1,0 +1,22 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Asignees</title>
+</head>
+<body>
+    <h1>Please provide worker by name and email </h1>
+    @using (Html.BeginForm("SaveAssToDatabase", "Home", FormMethod.Post))
+    {
+        <label for="name"> Name: </label>
+        <input type="text" name="name" id="name" /><br />
+
+        <label for="email"> E-mail: </label>
+        <input type="email" name="email" id="email" /><br />
+        <input type="hidden" name="Id" />
+
+        <input type="submit" value="Submit" />
+    }
+
+</body>
+</html>
+
