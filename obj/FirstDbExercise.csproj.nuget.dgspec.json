@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\karol\\Desktop\\Repos\\OndrejForal\\week-08\\day-01\\FirstDbExercise\\FirstDbExercise.csproj": {}
+    "C:\\Users\\User\\Desktop\\test.Net\\ToDoApp\\FirstDbExercise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\karol\\Desktop\\Repos\\OndrejForal\\week-08\\day-01\\FirstDbExercise\\FirstDbExercise.csproj": {
+    "C:\\Users\\User\\Desktop\\test.Net\\ToDoApp\\FirstDbExercise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\karol\\Desktop\\Repos\\OndrejForal\\week-08\\day-01\\FirstDbExercise\\FirstDbExercise.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\test.Net\\ToDoApp\\FirstDbExercise.csproj",
         "projectName": "FirstDbExercise",
-        "projectPath": "C:\\Users\\karol\\Desktop\\Repos\\OndrejForal\\week-08\\day-01\\FirstDbExercise\\FirstDbExercise.csproj",
-        "packagesPath": "C:\\Users\\karol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\karol\\Desktop\\Repos\\OndrejForal\\week-08\\day-01\\FirstDbExercise\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\test.Net\\ToDoApp\\FirstDbExercise.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\test.Net\\ToDoApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\karol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,20 +42,21 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -75,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

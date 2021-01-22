@@ -28,7 +28,7 @@ namespace FirstDbExercise
             services.AddTransient<ToDoService>();
             services.AddTransient<AsigneeService>();
             services.AddDbContext<ApplicationDbContext>(builder =>
-            builder.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            builder.UseSqlServer(configuration.GetConnectionString("ApplicationDbContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
